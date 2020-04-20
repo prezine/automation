@@ -13,6 +13,12 @@ class Bot:
         self.email = email
         # self.bot = webdriver.Firefox(executable_path='/bin/geckodriver')
         self.bot = webdriver.Chrome("/usr/local/bin/chromedriver")
+        self.bot = webdriver.ChromeOptions()
+        self.bot.add_argument('--disable-extensions')
+        self.bot.add_argument('--headless')
+        self.bot.add_argument('--disable-gpu')
+        self.bot.add_argument('--no-sandbox')
+        return webdriver.Chrome(chrome_options=self.bot)
 
     def login(self):
         bot = self.bot
@@ -31,9 +37,9 @@ class Bot:
         bot.close()
 
 with open('data.json') as json_file:
-	data = json.load(json_file)
-	i = 1
-	while i < 3:
-		i = i + 1
-		automate = Bot(data[i]['FIRSTNAME'], data[i]['EMAIL'])
-		automate.login()
+    data = json.load(json_file)
+    i = 1
+    while i < 3:
+        i = i + 1
+        automate = Bot(data[i]['FIRSTNAME'], data[i]['EMAIL'])
+        automate.login()
