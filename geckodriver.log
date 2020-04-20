@@ -1,0 +1,10 @@
+1587380024182	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.nerWv9vJiMiF"
+
+(firefox:26513): Gtk-WARNING **: 11:53:54.147: Theme parsing error: gtk.css:3611:22: 'none' is not a valid color name
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/addonsInfo.js, line 91: SyntaxError: "0"-prefixed octal literals and octal escape sequences are deprecated; for octal literals use the "0o" prefix instead
+
+(/usr/lib/firefox/firefox:26631): Gtk-WARNING **: 11:54:13.028: Theme parsing error: gtk.css:3611:22: 'none' is not a valid color name
+1587380057969	Marionette	INFO	Listening on port 44591
+1587380058593	Marionette	WARN	TLS certificate errors will be ignored for this session
+Gdk-Message: 12:06:47.492: firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
