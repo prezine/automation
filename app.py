@@ -11,14 +11,16 @@ class Bot:
     def __init__(self,name,email):
         self.name = name
         self.email = email
-        # self.bot = webdriver.Firefox(executable_path='/bin/geckodriver')
+        # self.bot = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
         self.bot = webdriver.Chrome("/usr/local/bin/chromedriver")
-        self.bot = webdriver.ChromeOptions()
-        self.bot.add_argument('--disable-extensions')
-        self.bot.add_argument('--headless')
-        self.bot.add_argument('--disable-gpu')
-        self.bot.add_argument('--no-sandbox')
-        return webdriver.Chrome(chrome_options=self.bot)
+        # self.bot = webdriver.ChromeOptions()
+        self.bot.binary_location = "/usr/bin/google-chrome"
+        # self.bot.add_argument('--disable-extensions')
+        # self.bot.add_argument('--headless')
+        # self.bot.add_argument('--disable-gpu')
+        # self.bot.add_argument('--no-sandbox')
+        # return webdriver.Chrome(chrome_options=self.bot)
+        return None;
 
     def login(self):
         bot = self.bot
